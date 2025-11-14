@@ -6,7 +6,9 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://abhishek:brandpanel@cluster0.6yibpsr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+
+
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,

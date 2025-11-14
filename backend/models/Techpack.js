@@ -16,12 +16,20 @@ const techpackSchema = new mongoose.Schema({
   printtechnique: String,
   status: String,
   brandManager: String,
+  brand: String,
   styleId: String,
   timestamp: String,
   previewUrl: String,
+  pdfview: String,
   totalPages: Number,
   pdfPath: String,
+  // If stored on S3
+  pdfUrl: String,
+  s3Key: String,
+  s3BucketName: String,
   pdfOriginalName: String,
+  extractedImages: { type: [String], default: [] },
+  extractedColors: { type: [String], default: [] },
   comments: [commentSchema]
 }, { collection: 'tech--packs' });
 
